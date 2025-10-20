@@ -206,9 +206,11 @@ button.addEventListener("click", changeColor);
     <button id="alertButton">Show Alert</button>
 
     <script>
+      
         var input = document.getElementById("textInput");
         var button = document.getElementById("alertButton");
-        function showAlert();
+      
+      function showAlert() {
             var inputText = input.value;
             alert("You entered: " + inputText);
       }
