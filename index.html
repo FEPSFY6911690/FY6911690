@@ -206,16 +206,18 @@ button.addEventListener("click", changeColor);
     <button id="alertButton">Show Alert</button>
 
     <script>
-      
+        // Get references to the input field and button
         var input = document.getElementById("textInput");
         var button = document.getElementById("alertButton");
-      
-      function showAlert() {
+
+        // Function to show an alert with the input text
+        function showAlert() {
             var inputText = input.value;
             alert("You entered: " + inputText);
       }
 
-      button.addEventListener("click", showAlert);
+        // Add a click event listener to the button
+        button.addEventListener("click", showAlert);
     </script>
 </body>
 </html>
