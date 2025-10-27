@@ -80,8 +80,8 @@ p.ex1 {
         
  <hr>
  <h3 id="Abstract">Abstract</h3>
-   <p id="Abstract">
-    <pre>
+   <pre id="Abstract">
+    
                This article explores how the staged combustion cycle used in the RS-25 engines helped develop 
                the Space Shuttle into a partially reusable rocket-launched vehicle. Using a staged combustion 
                cycle allowed the Space Shuttle engines to effectively use 62,300 gallons of fuel per minute during
@@ -93,8 +93,8 @@ p.ex1 {
 
 <hr>
  <h3 id="Introduction">Introduction</h3>
-    <p id="Introduction">  
-    <pre>
+    <pre id="Introduction">  
+    
               The RS-25 is a liquid-fuel cryogenic rocket engine that burns liquid hydrogen and liquid oxygen as propellants.
               It was built in the United States by Rocketdyne, with development beginning around the 1970s (Terry, 2025).
               The Space Shuttle utilised a cluster of three RS-25 engines, which were used for propulsion during ascent. A 
@@ -105,7 +105,6 @@ p.ex1 {
               use staged combustion rather than gas generator cycles due to the higher thrust levels of 2279kN compared to 1000kN
               of a typical gas generator cycle. Staged combustion cycle engines are also reusable, and designed for 100s of uses
               after inspection and refurbishment, which highly suited the Space Shuttle's needs. 
-
   </pre>  
 
 <hr>     
@@ -183,9 +182,9 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
 var data = google.visualization.arrayToDataTable([
 ['Task', 'Hours per Day'],
-['Full flow methalox', 8],
+['Full flow methalox enginjes', 3],
 ['Solid rocket engines', 8],
-['Liquid rocket engines', 2],
+['Staged combustion engines', 6],
 ]);
 var options = {
 title: 'Rocket engine cycle types'
@@ -277,7 +276,7 @@ chart.draw(data, options);
 <hr>
 <script>
   // Function to calculate and display word count for a specified section
-  function displayWordCount(Abstract, Introduction) {
+  function displayWordCount(sectionId, outputId) {
     // Get the text content from the specified section
     const text = document.getElementById(sectionId).textContent;
     // Split text into words based on spaces and filter out any empty strings
@@ -294,6 +293,7 @@ chart.draw(data, options);
     const IntroductionCount = displayWordCount("Introduction");
     // Calculate the sum of all selected sections
     const totalWordCount = AbstractCount + IntroductionCount;
+    
     // Display the total word count
     document.getElementById("totalWordCount").innerText = 'Total word count: ${totalWordCount}';
   }
