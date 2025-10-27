@@ -61,6 +61,46 @@
     window.onload = getLastUpdatedTime;
 </script>
 
+<!--/////////////////////////////////////////////////////////////////////// -->   
+<!--///////////////////////// Word count function ////////////////////////// --> 
+<!--/////////////////////////////////////////////////////////////////////// --> 
+
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+
+<hr>
+
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\a+/);
+
+    // Count the words
+    const wordCount = wordArray.length;
+
+    // Return the word count for summing purposes'
+    return wordCount;
+  }
+  // Function to calculagte and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Abstract");
+    const AnalysisCount = displayWordCount("Introduction");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount;
+
+    //Display the total word count
+    document.getElementById("totalWordCount").innerText = 'Total word count: ${totalWordCount}';
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
+        
+        
                 
       
 <hr style="border: 1px solid #999; margin: 20px 0;">
@@ -135,7 +175,7 @@ p.ex1 {
  <hr>
  <h3 id="Abstract">Abstract</h3>
       </p>     
- 
+   <p id="Abstract">
 <p class="ex1">
 <pre>
                This article explores how the staged combustion cycle used in the RS-25 engines helped develop 
@@ -150,7 +190,7 @@ p.ex1 {
 <hr>
  <h3 id="Introduction">Introduction</h3>
       </p>
-        
+    <p id="Introduction">    
 <p class="ex1">
 <pre>
               The RS-25 is a liquid-fuel cryogenic rocket engine that burns liquid hydrogen and liquid oxygen as propellants.
