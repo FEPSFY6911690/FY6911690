@@ -80,8 +80,8 @@ p.ex1 {
         
  <hr>
  <h3 id="Abstract">Abstract</h3>
-   <pre id="Abstract">
-    
+   <pre id="Abstract"></pre>
+  <pre>
                This article explores how the staged combustion cycle used in the RS-25 engines helped develop 
                the Space Shuttle into a partially reusable rocket-launched vehicle. Using a staged combustion 
                cycle allowed the Space Shuttle engines to effectively use 62,300 gallons of fuel per minute during
@@ -93,8 +93,8 @@ p.ex1 {
 
 <hr>
  <h3 id="Introduction">Introduction</h3>
-    <pre id="Introduction">  
-    
+    <pre id="Introduction"></pre>
+  <pre>  
               The RS-25 is a liquid-fuel cryogenic rocket engine that burns liquid hydrogen and liquid oxygen as propellants.
               It was built in the United States by Rocketdyne, with development beginning around the 1970s (Terry, 2025).
               The Space Shuttle utilised a cluster of three RS-25 engines, which were used for propulsion during ascent. A 
@@ -274,30 +274,38 @@ chart.draw(data, options);
   <!-- /////////////////////////////////////////////////////////////////////////////// -->
 <!-- Placeholder for total word count -->
 <p id="totalWordCount"></p>
+        
 <hr>
+        
 <script>
   // Function to calculate and display word count for a specified section
   function displayWordCount(sectionId, outputId) {
     // Get the text content from the specified section
     const text = document.getElementById(sectionId).textContent;
+    
     // Split text into words based on spaces and filter out any empty strings
     const wordArray = text.trim().split(/\s+/);
+    
     // Count the words
     const wordCount = wordArray.length;
+    
     // Return the word count for summing purposes
     return wordCount;
   }
+  
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const AbstractCount = displayWordCount("Abstract");
     const IntroductionCount = displayWordCount("Introduction");
+    
     // Calculate the sum of all selected sections
     const totalWordCount = AbstractCount + IntroductionCount;
     
     // Display the total word count
     document.getElementById("totalWordCount").innerText = 'Total word count: ${totalWordCount}';
   }
+  
   // Run the function for specific sections and display total count when the page loads
   window.onload = displayTotalWordCount;
 </script>
