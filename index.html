@@ -98,9 +98,8 @@ p.ex1 {
 
  <hr>
  <h3 style="font-family: Times New Roman, sans-serif; font-weight: bold; id="Abstract">Abstract</h3>
-   <pre id="Abstract"></pre>
          <p class="ex1">
-  <pre style="font-family: Times New Roman, sans-serif; font-size: 19px;">
+  <pre style="font-family: Times New Roman, sans-serif; font-size: 19px;" id="Abstract">
      
          This article examines how the staged combustion cycle employed in the RS-25 engines contributed to the development of 
          the Space Shuttle into a partially reusable rocket-launched vehicle. Using a staged combustion cycle, the Space Shuttle
@@ -110,13 +109,13 @@ p.ex1 {
          liftoff (History of the Space Shuttle Main Engines, no date).
      
   </pre>   
-         </p>         
+              
 
 <hr>
 <h3 style="font-family: Times New Roman, sans-serif; font-weight: bold; id="Introduction">Introduction</h3>
-    <pre id="Introduction"></pre>
+
          <p class="ex1">
-  <pre style="font-family: Times New Roman, sans-serif; font-size: 19px;">  
+  <pre style="font-family: Times New Roman, sans-serif; font-size: 19px;" id="Introduction">  
      
          The RS-25 is a liquid-fuel cryogenic rocket engine that burns liquid hydrogen and liquid oxygen as propellants. It was
          built in the United States by Rocketdyne, with development beginning around the 1970s (Terry, 2025). The Space Shuttle
@@ -130,7 +129,7 @@ p.ex1 {
          highly suits the space shuttle’s needs.
      
   </pre>  
-</p>
+
          
 <hr>     
 <h3 style="font-family: Times New Roman, sans-serif; font-weight: bold; id="How-does-a-staged-combustion-cycle-work?">How does a staged combustion cycle work?</h3>
@@ -375,33 +374,38 @@ chart.draw(data, options);
   <!-- ////////////////////////////// Word count function //////////////////////////// -->
   <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-<script>        
+
+<!-- Placeholder for total word count -->
 <p id="totalWordCount"></p>
 <hr>
-
-function displayWordCount(sectionId) {
-  const text = document.getElementById(sectionId).textContent;
-  const wordArray = text.split(/\s+/).filter(word => word !== '');
-  return wordArray.length;
-}
-
-function displayTotalWordCount() {
-  const abstractCount = displayWordCount('Abstract');
-  const introductionCount = displayWordCount('Introduction');
-  const stagedCombustionCount = displayWordCount('How-does-a-staged-combustion-cycle-work');
-
-  const totalWordCount = abstractCount + introductionCount + stagedCombustionCount;
-
-  // Now inside the function
- function displayTotalWordCount() {
-  document.getElementById("totalWordCount").innerText = "Testing output";
-}
-
-
-window.onload = displayTotalWordCount;
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const AbstractCount = displayWordCount("Abstract");
+    const IntroductionCount = displayWordCount("Introduction");
+    // Calculate the sum of all selected sections
+    const totalWordCount = AbstractCount + IntroductionCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
 </script>
 
-</html>
+
+         
 
 
 
