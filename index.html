@@ -96,7 +96,7 @@ p.ex1 {
 
  <hr>
  <h3 style="font-family: Times New Roman, sans-serif; font-weight: bold; id="Abstract">Abstract</h3>
-   <pre id="Abstract"></pre>
+   <pre id="Abstract">
          <p class="ex1">
   <pre style="font-family: Times New Roman, sans-serif; font-size: 18px;">
          This article examines how the staged combustion cycle employed in the RS-25 engines contributed to the development of 
@@ -109,7 +109,7 @@ p.ex1 {
 
 <hr>
  <h3 style="font-family: Times New Roman, sans-serif; font-weight: bold; id="Introduction">Introduction</h3>
-    <pre id="Introduction"></pre>
+    <pre id="Introduction">
          <p class="ex1">
   <pre style="font-family: Times New Roman, sans-serif; font-size: 18px;">  
          The RS-25 is a liquid-fuel cryogenic rocket engine that burns liquid hydrogen and liquid oxygen as propellants. It was
@@ -126,7 +126,7 @@ p.ex1 {
 
 <hr>     
 <h3 style="font-family: Times New Roman, sans-serif; font-weight: bold; id="How-does-a-staged-combustion-cycle-work?">How does a staged combustion cycle work?</h3>
-      <pre id="How-does-a-staged-combustion-cycle-work?"></pre>   
+      <pre id="How-does-a-staged-combustion-cycle-work?"> 
         <p class="ex1">
 <pre style="font-family: Times New Roman, sans-serif; font-size: 18px;">
          A liquid fuel (such as liquid hydrogen) and a liquid oxidiser (such as liquid oxygen, which helps the fuel burn) are 
@@ -356,7 +356,7 @@ chart.draw(data, options);
   <!-- ////////////////////////////// Word count function //////////////////////////// -->
   <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
-        
+<p id="totalWordCount"></p>        
 <hr>
         
 <script>
@@ -380,9 +380,10 @@ chart.draw(data, options);
     // Calculate word count for each section and accumulate the total
     const AbstractCount = displayWordCount("Abstract");
     const IntroductionCount = displayWordCount("Introduction");
-    
+    const How-does-a-staged-combustion-cycle-work?Count = displayWordCount("How-does-a-staged-combustion-cycle-work?");
+     
     // Calculate the sum of all selected sections
-    const totalWordCount = AbstractCount + IntroductionCount;
+    const totalWordCount = AbstractCount + IntroductionCount + How-does-a-staged-combustion-cycle-work?Count;
     
     // Display the total word count
     document.getElementById("totalWordCount").innerText = 'Total word count: ${totalWordCount}';
