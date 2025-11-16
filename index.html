@@ -375,10 +375,10 @@ chart.draw(data, options);
   <!-- ////////////////////////////// Word count function //////////////////////////// -->
   <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
+<script>        
 <p id="totalWordCount"></p>
 <hr>
 
-<script>
 function displayWordCount(sectionId) {
   const text = document.getElementById(sectionId).textContent;
   const wordArray = text.split(/\s+/).filter(word => word !== '');
@@ -396,13 +396,12 @@ function displayTotalWordCount() {
  function displayTotalWordCount() {
   document.getElementById("totalWordCount").innerText = "Testing output";
 }
-}
+
 
 window.onload = displayTotalWordCount;
 </script>
 
-
-
+</html>
 
 
 
