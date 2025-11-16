@@ -376,7 +376,7 @@ chart.draw(data, options);
   <!-- /////////////////////////////////////////////////////////////////////////////// -->
 
 <p id="totalWordCount"></p>
-<hr />
+<hr>
 
 <script>
 function displayWordCount(sectionId) {
@@ -393,7 +393,9 @@ function displayTotalWordCount() {
   const totalWordCount = abstractCount + introductionCount + stagedCombustionCount;
 
   // Now inside the function
-  document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+ function displayTotalWordCount() {
+  document.getElementById("totalWordCount").innerText = "Testing output";
+}
 }
 
 window.onload = displayTotalWordCount;
