@@ -198,7 +198,7 @@ staged combustion cycle. This makes the engines more expensive compared to simpl
    
 <hr style="margin-bottom: 2px;">
 <h3 style="font-family: Times New Roman, sans-serif; font-weight: bold;" id="Analysis-and-discussion">Analysis and discussion</h3>       
-<pre id="Analysis-and-discussion">  
+<pre id="Analysis-and-discussion"> 
   <table>
   <tr>
     <th>               </th>
@@ -213,33 +213,33 @@ staged combustion cycle. This makes the engines more expensive compared to simpl
   <tr>
     <td>  Efficiency </td>
     <td> Very high due to complete
-    combustion of all propellants</td>
+   combustion of all propellants</td>
     <td> Lower efficiency since some 
-     propellant energy is wasted </td>
+   propellant energy is wasted </td>
   </tr>
   <tr>
     <td> Thrust </td>
     <td> Lower thrust-to-weight ratio
-    but better performance </td>
+   but better performance </td>
     <td> Very high thrust </td>
   </tr>
   <tr>
     <td> Safety </td>
     <td> Complex, however, it can be safely tested
-         and aborted before ignition </td>
+    and aborted before ignition </td>
     <td> Safer due to lower operating pressures
     and temperatures </td>
   </tr>
   <tr>
     <td> Applications </td>
     <td> High-performance upper and main stages 
-         for launch vehicles, and reusable rockets </td>
+     for launch vehicles, and reusable rockets </td>
     <td> Booster engines where reliability matters
-    more than efficiency </td>
+     more than efficiency </td>
   </tr>
   </table>  
  
-<pre style="font-family: Times New Roman, sans-serif; font-size: 18px;">
+<pre style="font-family: Times New Roman, sans-serif; font-size: 18px;" id="Analysis-and-discussion"> 
 The table above highlights the differences between a staged combustion cycle and
 a gas generator cycle. Gas generator cycles prioritise reliability and ease of 
 operation by venting turbine exhaust. However, this reduces efficiency as propellant
@@ -351,15 +351,14 @@ Verify Last Modified Time
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const AbstractCount = displayWordCount("Abstract");
     const IntroductionCount = displayWordCount("Introduction");
     const StagedCount = displayWordCount("How-does-a-staged-combustion-cycle-work?");
     const AdvantagesCount = displayWordCount("Advantages-of-a-staged-combustion-cycle");
     const ChallengesCount = displayWordCount("Engineering-challenges-of-the-RS-25");
+    const AnalysisCount = displayWordCount("Analysis-and-discussion");
     const ConclusionCount = displayWordCount("Conclusion");
-    const ReferencesCount = displayWordCount("References"); 
     // Calculate the sum of all selected sections
-    const totalWordCount = AbstractCount + IntroductionCount + StagedCount + AdvantagesCount + ChallengesCount + ConclusionCount + ReferencesCount;
+    const totalWordCount = IntroductionCount + StagedCount + AdvantagesCount + ChallengesCount + ConclusionCount + AnalysisCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
